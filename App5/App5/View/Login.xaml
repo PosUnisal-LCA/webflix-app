@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App5.View.Login"
+              xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
+             Title="Login"
+             NavigationPage.HasNavigationBar="True"
+             NavigationPage.HasBackButton="True">
+    <StackLayout>
+
+    <StackLayout
+            Margin="0,100,0,0"
+            Padding="20"
+            VerticalOptions="CenterAndExpand">
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="9*" />
+
+                </Grid.ColumnDefinitions>
+
+                <iconize:IconLabel
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    Text="fa-user"
+                    TextColor="{StaticResource corTelaInicial}"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="txtLogin"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Start"
+                    Keyboard="Text"
+                    Placeholder="login"
+                    VerticalOptions="Center">
+
+                </Entry>
+                <iconize:IconLabel
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    FontSize="Large"
+                    HorizontalTextAlignment="Center"
+                    Text="fa-lock"
+                    TextColor="{StaticResource corTelaInicial}"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="txtSenha"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Start"
+                    IsPassword="True"
+                    Keyboard="Text"
+                    Placeholder="Senha"
+                    VerticalOptions="Center">
+
+                </Entry>
+
+            </Grid>
+            <Button
+                x:Name="btnLogin"
+                Clicked="logar"
+                Margin="0,50,0,0"
+                BackgroundColor="{StaticResource corTelaInicial}"
+                BorderColor="{StaticResource corTelaInicial}"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Entrar"
+                TextColor="{StaticResource corTextoClaro}"
+                VerticalOptions="Center" />
+
+            <Label
+                x:Name="lblLogin"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                TextColor="{StaticResource corTextoClaro}"
+                VerticalOptions="Center" />
+        </StackLayout>
+    <StackLayout VerticalOptions="End">
+            <Button
+                x:Name="btnCadastrar"
+                Clicked="cadastrar"
+                Margin="0,50,0,0"
+                BackgroundColor="{StaticResource corTelaInicial}"
+                BorderColor="{StaticResource corTelaInicial}"
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Cadastrar"
+                TextColor="{StaticResource corTextoClaro}"
+                VerticalOptions="Center" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="App5.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="corTextoClaro">#EFF8FB</Color>
+            <Color x:Key="corTextoEscuro">#000000</Color>
+            <Color x:Key="corHeader">#e51010</Color>
+            <Color x:Key="corTelaInicial">#e51010</Color>
+            <Color x:Key="corTelas">#EFFBFB</Color>
+            <Color x:Key="corNav">#e51010</Color>
+            <Color x:Key="corBotao">#e51010</Color>
+            <Color x:Key="corDashboard">#fff</Color>
+            <Color x:Key="corModal">#fff</Color>
+            <Color x:Key="corBotaoDashboard">#e51010</Color>
+            <Color x:Key="corBordaDashboard">#e51010</Color>
+            <Color x:Key="corBordaBotao">#e51010</Color>
+            <Color x:Key="corDoFrame">#fff</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App5.View.CadastrarUsuario"
+             Title="Cadastrar Usuário"
+               xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <ScrollView>
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+
+                    </Grid.RowDefinitions>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="Nome" />
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        FontSize="Micro"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="End"
+                        Text="* Nome Completo" />
+
+                    <Entry
+                        x:Name="txtNome"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Keyboard="Text">
+
+                    </Entry>
+
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="Login" />
+
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        FontSize="Micro"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="End"
+                        Text="* Login para acesso" />
+
+                    <Entry
+                        x:Name="txtLogin"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="2"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start">
+
+                    </Entry>
+
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Text="Senha" />
+
+                    <Label
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        FontSize="Micro"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="End"
+                        Text="* Senha de acesso ao sistema" />
+
+                    <Entry
+                        x:Name="txtSenha"
+                        Grid.Row="5"
+                        Grid.ColumnSpan="2"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Start">
+
+                    </Entry>
+
+                    <iconize:IconButton
+                        x:Name="btnSalvarUsario"
+                        Clicked="salvarUsuario"
+                        Grid.Row="6"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="{StaticResource corBotaoDashboard}"
+                        BorderColor="{StaticResource corBotaoDashboard}"
+                        BorderRadius="0"
+                        BorderWidth="0"
+                        FontSize="Large"
+                        IsVisible="true"
+                        Text="fa-check-circle"
+                        TextColor="{StaticResource corTextoClaro}" />
+
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

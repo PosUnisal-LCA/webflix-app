@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App5.View.ListViewPage1">
+  <ListView x:Name="listaUsuario"
+            ItemsSource="{Binding Usuario}"
+            ItemTapped="Handle_ItemTapped"
+             RowHeight="80"
+           >
+            
+    <!--Built in Cells-->
+    <ListView.ItemTemplate>
+            <DataTemplate >
+                <ViewCell >
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="8*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    FontSize="Small"
+                                    HorizontalOptions="Start"
+                                    Text="Nome"
+                                    TextColor="Accent" />
+                        <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    FontSize="Large"
+                                    HorizontalOptions="Start"
+                                    Text="{Binding name}"
+                                    />
+                        <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    FontSize="Small"
+                                    HorizontalOptions="Start"
+                                    Text="Login"
+                                    TextColor="Accent" />
+
+                        <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    FontSize="Large"
+                                    HorizontalOptions="StartAndExpand"
+                                    HorizontalTextAlignment="Start"
+                                    Text="{Binding login}" />
+
+                    </Grid>
+
+                </ViewCell>
+            </DataTemplate>
+    </ListView.ItemTemplate>
+   
+  </ListView>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App5.View.MenuMaster"
+             Title="Master">
+  <StackLayout>
+    <ListView x:Name="MenuItemsListView"
+              SeparatorVisibility="None"
+              HasUnevenRows="true"
+              ItemsSource="{Binding MenuItems}">
+      <ListView.Header>
+                <StackLayout Padding="5" BackgroundColor="{StaticResource corNav}">
+                    <Label
+                        x:Name="lblUsuario"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        Style="{DynamicResource SubtitleStyle}"
+                        Text="Usuario"
+                        TextColor="{StaticResource corTextoClaro}"
+                        VerticalOptions="Start" />
+                </StackLayout>
+            </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
+              <Label VerticalOptions="FillAndExpand" 
+                    VerticalTextAlignment="Center" 
+                    Text="{Binding Title}" 
+                    FontSize="24"/>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

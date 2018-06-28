@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App5.View.MenuDetail"
+             xmlns:iconize="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
+             Title="WebFlix">
+    <ContentPage.Content>
+
+            <StackLayout
+            Margin="0,100,0,0"
+            Padding="20"
+            VerticalOptions="StartAndExpand">
+
+            <Label
+                 FontSize="Large"
+                 HorizontalOptions="Start"
+                 Text="{Binding name}"
+                 TextColor="Accent"/>
+                
+            <Label FontSize="Small"
+                   HorizontalOptions="Center"
+                   TextColor="Accent"
+                   Text="Descrição"/>
+            <Label FontSize="Default"
+                   HorizontalOptions="Start"  
+                   Text="{Binding description}"/>
+
+            <Label FontSize="Small"
+                   HorizontalOptions="Center"
+                   TextColor="Accent"
+                   Text="Categoria"/>
+            <Label FontSize="Default"
+                   HorizontalOptions="Start"  
+                   Text="{Binding category[0].name}"/>
+            <Image x:Name="backgroundImage" Source="{Binding image[0].url}" AbsoluteLayout.LayoutBounds="0,0,1,1"   AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
+
+
+        </StackLayout>
+        </ContentPage.Content>
+
+</ContentPage>
